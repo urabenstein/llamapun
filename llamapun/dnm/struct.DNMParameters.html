@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `DNMParameters` struct in crate `llamapun`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, DNMParameters">
+
+    <title>llamapun::dnm::DNMParameters - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>llamapun</a>::<wbr><a href='index.html'>dnm</a></p><script>window.sidebarCurrent = {name: 'DNMParameters', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>llamapun</a>::<wbr><a href='index.html'>dnm</a>::<wbr><a class='struct' href=''>DNMParameters</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-80' class='srclink' href='../../src/llamapun/src/dnm/parameters.rs.html#34-58' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct DNMParameters {
+    pub special_tag_name_options: <a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='enum' href='../../llamapun/dnm/enum.SpecialTagsOption.html' title='llamapun::dnm::SpecialTagsOption'>SpecialTagsOption</a>&gt;,
+    pub special_tag_class_options: <a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='enum' href='../../llamapun/dnm/enum.SpecialTagsOption.html' title='llamapun::dnm::SpecialTagsOption'>SpecialTagsOption</a>&gt;,
+    pub normalize_white_spaces: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub wrap_tokens: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub move_whitespaces_between_nodes: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub normalize_unicode: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub stem_words_once: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub stem_words_full: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub convert_to_lowercase: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+}</pre><div class='docblock'><p>Paremeters for the DNM generation</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.special_tag_name_options' class='structfield'>
+                           <span id='special_tag_name_options.v' class='invisible'>
+                           <code>special_tag_name_options: <a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='enum' href='../../llamapun/dnm/enum.SpecialTagsOption.html' title='llamapun::dnm::SpecialTagsOption'>SpecialTagsOption</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>How to deal with special tags (e.g. <code>&lt;math&gt;</code> tags)</p>
+</div><span id='structfield.special_tag_class_options' class='structfield'>
+                           <span id='special_tag_class_options.v' class='invisible'>
+                           <code>special_tag_class_options: <a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, <a class='enum' href='../../llamapun/dnm/enum.SpecialTagsOption.html' title='llamapun::dnm::SpecialTagsOption'>SpecialTagsOption</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>How to deal with tags with special class names (e.g. ltx_note_mark)
+<em>Remark</em>: If both a tag name and a tag class match, the tag name rule
+will be applied.</p>
+</div><span id='structfield.normalize_white_spaces' class='structfield'>
+                           <span id='normalize_white_spaces.v' class='invisible'>
+                           <code>normalize_white_spaces: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>merge sequences of whitespaces into a single &#39; &#39;.
+<em>Doesn&#39;t affect tokens</em></p>
+</div><span id='structfield.wrap_tokens' class='structfield'>
+                           <span id='wrap_tokens.v' class='invisible'>
+                           <code>wrap_tokens: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>put spaces before and after tokens</p>
+</div><span id='structfield.move_whitespaces_between_nodes' class='structfield'>
+                           <span id='move_whitespaces_between_nodes.v' class='invisible'>
+                           <code>move_whitespaces_between_nodes: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>if there is a trailing white space in a tag, don&#39;t make it part
+of that tag. Requires <code>normalize_white_spaces</code> to be set.</p>
+</div><span id='structfield.normalize_unicode' class='structfield'>
+                           <span id='normalize_unicode.v' class='invisible'>
+                           <code>normalize_unicode: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Replace unicode characters by the ascii code representation</p>
+</div><span id='structfield.stem_words_once' class='structfield'>
+                           <span id='stem_words_once.v' class='invisible'>
+                           <code>stem_words_once: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Apply the morpha stemmer once to the text nodes</p>
+</div><span id='structfield.stem_words_full' class='structfield'>
+                           <span id='stem_words_full.v' class='invisible'>
+                           <code>stem_words_full: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Apply the morpha stemmer to the text nodes
+as often as it changes something</p>
+</div><span id='structfield.convert_to_lowercase' class='structfield'>
+                           <span id='convert_to_lowercase.v' class='invisible'>
+                           <code>convert_to_lowercase: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Move to lowercase (remark: The stemmer does automatically)</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../llamapun/dnm/struct.DNMParameters.html' title='llamapun::dnm::DNMParameters'>DNMParameters</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-92' class='srclink' href='../../src/llamapun/src/dnm/parameters.rs.html#77-130' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.llamapun_normalization' class='method'><span id='llamapun_normalization.v' class='invisible'><code>fn <a href='#method.llamapun_normalization' class='fnname'>llamapun_normalization</a>() -&gt; <a class='struct' href='../../llamapun/dnm/struct.DNMParameters.html' title='llamapun::dnm::DNMParameters'>DNMParameters</a></code></span></h4>
+<div class='docblock'><p>Normalize in a reasonable way for our math documents</p>
+</div><h4 id='method.check' class='method'><span id='check.v' class='invisible'><code>fn <a href='#method.check' class='fnname'>check</a>(&amp;self)</code></span></h4>
+<div class='docblock'><p>Prints warnings, if the parameter settings don&#39;t make sense.
+Doesn&#39;t check for every possible stupidity</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../llamapun/dnm/struct.DNMParameters.html' title='llamapun::dnm::DNMParameters'>DNMParameters</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-90' class='srclink' href='../../src/llamapun/src/dnm/parameters.rs.html#60-75' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><span id='default.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../llamapun/dnm/struct.DNMParameters.html' title='llamapun::dnm::DNMParameters'>DNMParameters</a></code></span></h4>
+<div class='docblock'><p>Don&#39;t do anything fancy and specific by default</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "llamapun";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

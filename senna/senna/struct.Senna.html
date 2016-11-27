@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Senna` struct in crate `senna`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Senna">
+
+    <title>senna::senna::Senna - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>senna</a>::<wbr><a href='index.html'>senna</a></p><script>window.sidebarCurrent = {name: 'Senna', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>senna</a>::<wbr><a href='index.html'>senna</a>::<wbr><a class='struct' href=''>Senna</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-71' class='srclink' href='../../src/senna/senna.rs.html#61-70' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Senna {
+    pub senna_ptr: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='enum' href='../../libc/enum.c_void.html' title='libc::c_void'>c_void</a>,
+    pub pos_map: <a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;&amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>, <a class='enum' href='../../senna/pos/enum.POS.html' title='senna::pos::POS'>POS</a>&gt;,
+    pub psg_map: <a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;&amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>, <a class='enum' href='../../senna/phrase/enum.Phrase.html' title='senna::phrase::Phrase'>Phrase</a>&gt;,
+}</pre><div class='docblock'><p>Handle to all the hashes etc.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.senna_ptr' class='structfield'>
+                           <span id='senna_ptr.v' class='invisible'>
+                           <code>senna_ptr: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='enum' href='../../libc/enum.c_void.html' title='libc::c_void'>c_void</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>pointer to the corresponding C struct</p>
+</div><span id='structfield.pos_map' class='structfield'>
+                           <span id='pos_map.v' class='invisible'>
+                           <code>pos_map: <a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;&amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>, <a class='enum' href='../../senna/pos/enum.POS.html' title='senna::pos::POS'>POS</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>HashMap for converting string pos tags to <code>pos::POS</code>
+(unfortunately, there seem to be no static HashMaps in Rust yet)</p>
+</div><span id='structfield.psg_map' class='structfield'>
+                           <span id='psg_map.v' class='invisible'>
+                           <code>psg_map: <a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;&amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>, <a class='enum' href='../../senna/phrase/enum.Phrase.html' title='senna::phrase::Phrase'>Phrase</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>HashMap for converting string psg tags to <code>phrase::Phrase</code>
+(unfortunately, there seem to be no static HashMaps in Rust yet)</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='struct' href='../../senna/senna/struct.Senna.html' title='senna::senna::Senna'>Senna</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-75' class='srclink' href='../../src/senna/senna.rs.html#72-129' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class='method'><span id='new.v' class='invisible'><code>fn <a href='#method.new' class='fnname'>new</a>(opt_path: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='struct' href='../../senna/senna/struct.Senna.html' title='senna::senna::Senna'>Senna</a></code></span></h4>
+<div class='docblock'><p>Initializes senna based on the data files in <code>opt_path</code></p>
+</div><h4 id='method.get_number_of_words' class='method'><span id='get_number_of_words.v' class='invisible'><code>fn <a href='#method.get_number_of_words' class='fnname'>get_number_of_words</a>(&amp;mut self, sentence: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></span></h4>
+<div class='docblock'><p>Returns the number of words contained in a string
+(warning: Does full tokenization, i.e. relatively costly)</p>
+</div><h4 id='method.parse' class='method'><span id='parse.v' class='invisible'><code>fn <a href='#method.parse' class='fnname'>parse</a>(&amp;mut self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sentence: &amp;'a <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; options: <a class='struct' href='../../senna/senna/struct.SennaParseOptions.html' title='senna::senna::SennaParseOptions'>SennaParseOptions</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='struct' href='../../senna/sentence/struct.Sentence.html' title='senna::sentence::Sentence'>Sentence</a>&lt;'a&gt;</code></span></h4>
+<div class='docblock'><p>Parses a sentence and returns the results as a <code>Sentence</code> structure.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../../senna/senna/struct.Senna.html' title='senna::senna::Senna'>Senna</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-99' class='srclink' href='../../src/senna/senna.rs.html#132-137' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.drop' class='method'><span id='drop.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop' class='fnname'>drop</a>(&amp;mut self)</code></span></h4>
+<div class='docblock'><p>Senna&#39;s hash tables etc. must be freed</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "senna";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

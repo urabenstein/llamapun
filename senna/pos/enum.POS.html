@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `POS` enum in crate `senna`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, POS">
+
+    <title>senna::pos::POS - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>senna</a>::<wbr><a href='index.html'>pos</a></p><script>window.sidebarCurrent = {name: 'POS', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>senna</a>::<wbr><a href='index.html'>pos</a>::<wbr><a class='enum' href=''>POS</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-244' class='srclink' href='../../src/senna/pos.rs.html#7-56' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum POS {
+    NNP,
+    COM,
+    CD,
+    NNS,
+    JJ,
+    MD,
+    VB,
+    DT,
+    NN,
+    IN,
+    PUNCT,
+    VBZ,
+    VBG,
+    CC,
+    VBD,
+    VBN,
+    RB,
+    TO,
+    PRP,
+    RBR,
+    WDT,
+    VBP,
+    RP,
+    PRP_POSS,
+    JJS,
+    POS,
+    QUOT_S,
+    WP,
+    QUOT_B,
+    COL,
+    JJR,
+    WRB,
+    EX,
+    DOL,
+    NNPS,
+    WP_POSS,
+    LRB,
+    RRB,
+    PDT,
+    RBS,
+    FW,
+    UH,
+    SYM,
+    LS,
+    POUND,
+    PADDING,
+    UNAVAILABLE,
+    NOT_SET,
+}</pre><h2 class='variants'>Variants</h2>
+<span id='variant.NNP' class='variant'><span id='NNP.v' class='invisible'><code>NNP</code></span></span><span id='variant.COM' class='variant'><span id='COM.v' class='invisible'><code>COM</code></span></span><span id='variant.CD' class='variant'><span id='CD.v' class='invisible'><code>CD</code></span></span><span id='variant.NNS' class='variant'><span id='NNS.v' class='invisible'><code>NNS</code></span></span><span id='variant.JJ' class='variant'><span id='JJ.v' class='invisible'><code>JJ</code></span></span><span id='variant.MD' class='variant'><span id='MD.v' class='invisible'><code>MD</code></span></span><span id='variant.VB' class='variant'><span id='VB.v' class='invisible'><code>VB</code></span></span><span id='variant.DT' class='variant'><span id='DT.v' class='invisible'><code>DT</code></span></span><span id='variant.NN' class='variant'><span id='NN.v' class='invisible'><code>NN</code></span></span><span id='variant.IN' class='variant'><span id='IN.v' class='invisible'><code>IN</code></span></span><span id='variant.PUNCT' class='variant'><span id='PUNCT.v' class='invisible'><code>PUNCT</code></span></span><span id='variant.VBZ' class='variant'><span id='VBZ.v' class='invisible'><code>VBZ</code></span></span><span id='variant.VBG' class='variant'><span id='VBG.v' class='invisible'><code>VBG</code></span></span><span id='variant.CC' class='variant'><span id='CC.v' class='invisible'><code>CC</code></span></span><span id='variant.VBD' class='variant'><span id='VBD.v' class='invisible'><code>VBD</code></span></span><span id='variant.VBN' class='variant'><span id='VBN.v' class='invisible'><code>VBN</code></span></span><span id='variant.RB' class='variant'><span id='RB.v' class='invisible'><code>RB</code></span></span><span id='variant.TO' class='variant'><span id='TO.v' class='invisible'><code>TO</code></span></span><span id='variant.PRP' class='variant'><span id='PRP.v' class='invisible'><code>PRP</code></span></span><span id='variant.RBR' class='variant'><span id='RBR.v' class='invisible'><code>RBR</code></span></span><span id='variant.WDT' class='variant'><span id='WDT.v' class='invisible'><code>WDT</code></span></span><span id='variant.VBP' class='variant'><span id='VBP.v' class='invisible'><code>VBP</code></span></span><span id='variant.RP' class='variant'><span id='RP.v' class='invisible'><code>RP</code></span></span><span id='variant.PRP_POSS' class='variant'><span id='PRP_POSS.v' class='invisible'><code>PRP_POSS</code></span></span><span id='variant.JJS' class='variant'><span id='JJS.v' class='invisible'><code>JJS</code></span></span><span id='variant.POS' class='variant'><span id='POS.v' class='invisible'><code>POS</code></span></span><span id='variant.QUOT_S' class='variant'><span id='QUOT_S.v' class='invisible'><code>QUOT_S</code></span></span><span id='variant.WP' class='variant'><span id='WP.v' class='invisible'><code>WP</code></span></span><span id='variant.QUOT_B' class='variant'><span id='QUOT_B.v' class='invisible'><code>QUOT_B</code></span></span><span id='variant.COL' class='variant'><span id='COL.v' class='invisible'><code>COL</code></span></span><span id='variant.JJR' class='variant'><span id='JJR.v' class='invisible'><code>JJR</code></span></span><span id='variant.WRB' class='variant'><span id='WRB.v' class='invisible'><code>WRB</code></span></span><span id='variant.EX' class='variant'><span id='EX.v' class='invisible'><code>EX</code></span></span><span id='variant.DOL' class='variant'><span id='DOL.v' class='invisible'><code>DOL</code></span></span><span id='variant.NNPS' class='variant'><span id='NNPS.v' class='invisible'><code>NNPS</code></span></span><span id='variant.WP_POSS' class='variant'><span id='WP_POSS.v' class='invisible'><code>WP_POSS</code></span></span><span id='variant.LRB' class='variant'><span id='LRB.v' class='invisible'><code>LRB</code></span></span><span id='variant.RRB' class='variant'><span id='RRB.v' class='invisible'><code>RRB</code></span></span><span id='variant.PDT' class='variant'><span id='PDT.v' class='invisible'><code>PDT</code></span></span><span id='variant.RBS' class='variant'><span id='RBS.v' class='invisible'><code>RBS</code></span></span><span id='variant.FW' class='variant'><span id='FW.v' class='invisible'><code>FW</code></span></span><span id='variant.UH' class='variant'><span id='UH.v' class='invisible'><code>UH</code></span></span><span id='variant.SYM' class='variant'><span id='SYM.v' class='invisible'><code>SYM</code></span></span><span id='variant.LS' class='variant'><span id='LS.v' class='invisible'><code>LS</code></span></span><span id='variant.POUND' class='variant'><span id='POUND.v' class='invisible'><code>POUND</code></span></span><span id='variant.PADDING' class='variant'><span id='PADDING.v' class='invisible'><code>PADDING</code></span></span><span id='variant.UNAVAILABLE' class='variant'><span id='UNAVAILABLE.v' class='invisible'><code>UNAVAILABLE</code></span></span><span id='variant.NOT_SET' class='variant'><span id='NOT_SET.v' class='invisible'><code>NOT_SET</code></span></span><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='enum' href='../../senna/pos/enum.POS.html' title='senna::pos::POS'>POS</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-182' class='srclink' href='../../src/senna/pos.rs.html#58-163' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.to_str' class='method'><span id='to_str.v' class='invisible'><code>fn <a href='#method.to_str' class='fnname'>to_str</a>(&amp;self) -&gt; &amp;'static <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a></code></span></h4>
+<h4 id='method.generate_str_to_pos_map' class='method'><span id='generate_str_to_pos_map.v' class='invisible'><code>fn <a href='#method.generate_str_to_pos_map' class='fnname'>generate_str_to_pos_map</a>&lt;'a&gt;() -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;&amp;'a <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>, <a class='enum' href='../../senna/pos/enum.POS.html' title='senna::pos::POS'>POS</a>&gt;</code></span></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../../senna/pos/enum.POS.html' title='senna::pos::POS'>POS</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-293' class='srclink' href='../../src/senna/pos.rs.html#6' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../../senna/pos/enum.POS.html' title='senna::pos::POS'>POS</a></code></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../../senna/pos/enum.POS.html' title='senna::pos::POS'>POS</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-296' class='srclink' href='../../src/senna/pos.rs.html#6' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../../senna/pos/enum.POS.html' title='senna::pos::POS'>POS</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-297' class='srclink' href='../../src/senna/pos.rs.html#6' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><span id='eq.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../senna/pos/enum.POS.html' title='senna::pos::POS'>POS</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class='method'><span id='ne.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../../senna/pos/enum.POS.html' title='senna::pos::POS'>POS</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-303' class='srclink' href='../../src/senna/pos.rs.html#6' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../senna/pos/enum.POS.html' title='senna::pos::POS'>POS</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-306' class='srclink' href='../../src/senna/pos.rs.html#6' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "senna";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `NodeType` enum in crate `libxml`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, NodeType">
+
+    <title>libxml::tree::NodeType - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>libxml</a>::<wbr><a href='index.html'>tree</a></p><script>window.sidebarCurrent = {name: 'NodeType', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>libxml</a>::<wbr><a href='index.html'>tree</a>::<wbr><a class='enum' href=''>NodeType</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-472' class='srclink' href='../../src/libxml/tree.rs.html#191-213' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum NodeType {
+    ElementNode,
+    AttributeNode,
+    TextNode,
+    CDataSectionNode,
+    EntityRefNode,
+    EntityNode,
+    PiNode,
+    CommentNode,
+    DocumentNode,
+    DocumentTypeNode,
+    DocumentFragNode,
+    NotationNode,
+    HtmlDocumentNode,
+    DTDNode,
+    ElementDecl,
+    AttributeDecl,
+    EntityDecl,
+    NamespaceDecl,
+    XIncludeStart,
+    XIncludeEnd,
+    DOCBDocumentNode,
+}</pre><div class='docblock'><p>Types of xml nodes</p>
+</div><h2 class='variants'>Variants</h2>
+<span id='variant.ElementNode' class='variant'><span id='ElementNode.v' class='invisible'><code>ElementNode</code></span></span><span id='variant.AttributeNode' class='variant'><span id='AttributeNode.v' class='invisible'><code>AttributeNode</code></span></span><span id='variant.TextNode' class='variant'><span id='TextNode.v' class='invisible'><code>TextNode</code></span></span><span id='variant.CDataSectionNode' class='variant'><span id='CDataSectionNode.v' class='invisible'><code>CDataSectionNode</code></span></span><span id='variant.EntityRefNode' class='variant'><span id='EntityRefNode.v' class='invisible'><code>EntityRefNode</code></span></span><span id='variant.EntityNode' class='variant'><span id='EntityNode.v' class='invisible'><code>EntityNode</code></span></span><span id='variant.PiNode' class='variant'><span id='PiNode.v' class='invisible'><code>PiNode</code></span></span><span id='variant.CommentNode' class='variant'><span id='CommentNode.v' class='invisible'><code>CommentNode</code></span></span><span id='variant.DocumentNode' class='variant'><span id='DocumentNode.v' class='invisible'><code>DocumentNode</code></span></span><span id='variant.DocumentTypeNode' class='variant'><span id='DocumentTypeNode.v' class='invisible'><code>DocumentTypeNode</code></span></span><span id='variant.DocumentFragNode' class='variant'><span id='DocumentFragNode.v' class='invisible'><code>DocumentFragNode</code></span></span><span id='variant.NotationNode' class='variant'><span id='NotationNode.v' class='invisible'><code>NotationNode</code></span></span><span id='variant.HtmlDocumentNode' class='variant'><span id='HtmlDocumentNode.v' class='invisible'><code>HtmlDocumentNode</code></span></span><span id='variant.DTDNode' class='variant'><span id='DTDNode.v' class='invisible'><code>DTDNode</code></span></span><span id='variant.ElementDecl' class='variant'><span id='ElementDecl.v' class='invisible'><code>ElementDecl</code></span></span><span id='variant.AttributeDecl' class='variant'><span id='AttributeDecl.v' class='invisible'><code>AttributeDecl</code></span></span><span id='variant.EntityDecl' class='variant'><span id='EntityDecl.v' class='invisible'><code>EntityDecl</code></span></span><span id='variant.NamespaceDecl' class='variant'><span id='NamespaceDecl.v' class='invisible'><code>NamespaceDecl</code></span></span><span id='variant.XIncludeStart' class='variant'><span id='XIncludeStart.v' class='invisible'><code>XIncludeStart</code></span></span><span id='variant.XIncludeEnd' class='variant'><span id='XIncludeEnd.v' class='invisible'><code>XIncludeEnd</code></span></span><span id='variant.DOCBDocumentNode' class='variant'><span id='DOCBDocumentNode.v' class='invisible'><code>DOCBDocumentNode</code></span></span><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='enum' href='../../libxml/tree/enum.NodeType.html' title='libxml::tree::NodeType'>NodeType</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-232' class='srclink' href='../../src/libxml/tree.rs.html#215-244' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from_c_int' class='method'><span id='from_c_int.v' class='invisible'><code>fn <a href='#method.from_c_int' class='fnname'>from_c_int</a>(i: <a class='type' href='../../libc/types/os/arch/c95/type.c_int.html' title='libc::types::os::arch::c95::c_int'>c_int</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='../../libxml/tree/enum.NodeType.html' title='libxml::tree::NodeType'>NodeType</a>&gt;</code></span></h4>
+<div class='docblock'><p>converts an integer from libxml&#39;s <code>enum NodeType</code>
+to an instance of our <code>NodeType</code></p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../libxml/tree/enum.NodeType.html' title='libxml::tree::NodeType'>NodeType</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-494' class='srclink' href='../../src/libxml/tree.rs.html#189' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../../libxml/tree/enum.NodeType.html' title='libxml::tree::NodeType'>NodeType</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-519' class='srclink' href='../../src/libxml/tree.rs.html#189' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><span id='eq.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../libxml/tree/enum.NodeType.html' title='libxml::tree::NodeType'>NodeType</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class='method'><span id='ne.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "libxml";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

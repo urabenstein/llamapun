@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `PlotOption` enum in crate `gnuplot`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, PlotOption">
+
+    <title>gnuplot::PlotOption - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>gnuplot</a></p><script>window.sidebarCurrent = {name: 'PlotOption', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='index.html'>gnuplot</a>::<wbr><a class='enum' href=''>PlotOption</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-1236' class='srclink' href='../src/gnuplot/options.rs.html#22-63' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum PlotOption&lt;'l&gt; {
+    PointSymbol(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.char.html'>char</a>),
+    PointSize(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>),
+    Caption(&amp;'l <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>),
+    LineWidth(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>),
+    Color(&amp;'l <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>),
+    BorderColor(&amp;'l <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>),
+    LineStyle(<a class='enum' href='../gnuplot/enum.DashType.html' title='gnuplot::DashType'>DashType</a>),
+    FillAlpha(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>),
+    FillRegion(<a class='enum' href='../gnuplot/enum.FillRegionType.html' title='gnuplot::FillRegionType'>FillRegionType</a>),
+    ArrowType(<a class='enum' href='../gnuplot/enum.ArrowheadType.html' title='gnuplot::ArrowheadType'>ArrowheadType</a>),
+    ArrowSize(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>),
+}</pre><div class='docblock'><p>An enumeration of plot options you can supply to plotting commands, governing
+things like line width, color and others</p>
+</div><h2 class='variants'>Variants</h2>
+<span id='variant.PointSymbol' class='variant'><span id='PointSymbol.v' class='invisible'><code>PointSymbol(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.char.html'>char</a>)</code></span></span><div class='docblock'><p>Sets the symbol used for points. The valid characters are as follows:</p>
+
+<ul>
+<li><code>.</code> - dot</li>
+<li><code>+</code> - plus</li>
+<li><code>x</code> - cross</li>
+<li><code>*</code> - star</li>
+<li><code>s</code> - empty square</li>
+<li><code>S</code> - filled square</li>
+<li><code>o</code> - empty circle</li>
+<li><code>O</code> - filled circle</li>
+<li><code>t</code> - empty triangle</li>
+<li><code>T</code> - filled triangle</li>
+<li><code>d</code> - empty del (upside down triangle)</li>
+<li><code>D</code> - filled del (upside down triangle)</li>
+<li><code>r</code> - empty rhombus</li>
+<li><code>R</code> - filled rhombus</li>
+</ul>
+</div><span id='variant.PointSize' class='variant'><span id='PointSize.v' class='invisible'><code>PointSize(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>)</code></span></span><div class='docblock'><p>Sets the size of the points. The size acts as a multiplier, with 1.0 being the default.</p>
+</div><span id='variant.Caption' class='variant'><span id='Caption.v' class='invisible'><code>Caption(&amp;'l <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>)</code></span></span><div class='docblock'><p>Sets the caption of the plot element. Set to empty to hide it from the legend.</p>
+</div><span id='variant.LineWidth' class='variant'><span id='LineWidth.v' class='invisible'><code>LineWidth(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>)</code></span></span><div class='docblock'><p>Sets the width of lines.</p>
+</div><span id='variant.Color' class='variant'><span id='Color.v' class='invisible'><code>Color(&amp;'l <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>)</code></span></span><div class='docblock'><p>Sets the color of the plot element. The passed string can be a color name
+(e.g. &quot;black&quot; works), or an HTML color specifier (e.g. &quot;#FFFFFF&quot; is white). This specifies the fill color of a filled plot.</p>
+</div><span id='variant.BorderColor' class='variant'><span id='BorderColor.v' class='invisible'><code>BorderColor(&amp;'l <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>)</code></span></span><div class='docblock'><p>Sets the color of the border of a filled plot (if it has one). The passed string can be a color name
+(e.g. &quot;black&quot; works), or an HTML color specifier (e.g. &quot;#FFFFFF&quot; is white).</p>
+</div><span id='variant.LineStyle' class='variant'><span id='LineStyle.v' class='invisible'><code>LineStyle(<a class='enum' href='../gnuplot/enum.DashType.html' title='gnuplot::DashType'>DashType</a>)</code></span></span><div class='docblock'><p>Sets the style of the line. Note that not all gnuplot terminals support dashed lines. See DashType for the available styles.</p>
+</div><span id='variant.FillAlpha' class='variant'><span id='FillAlpha.v' class='invisible'><code>FillAlpha(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>)</code></span></span><div class='docblock'><p>Sets the transparency of a filled plot. <code>0.0</code> - fully transparent, <code>1.0</code> - fully opaque</p>
+</div><span id='variant.FillRegion' class='variant'><span id='FillRegion.v' class='invisible'><code>FillRegion(<a class='enum' href='../gnuplot/enum.FillRegionType.html' title='gnuplot::FillRegionType'>FillRegionType</a>)</code></span></span><div class='docblock'><p>Sets the fill region. See FillRegion for the available regions.</p>
+</div><span id='variant.ArrowType' class='variant'><span id='ArrowType.v' class='invisible'><code>ArrowType(<a class='enum' href='../gnuplot/enum.ArrowheadType.html' title='gnuplot::ArrowheadType'>ArrowheadType</a>)</code></span></span><div class='docblock'><p>Sets what an arrowhead looks like</p>
+</div><span id='variant.ArrowSize' class='variant'><span id='ArrowSize.v' class='invisible'><code>ArrowSize(<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>)</code></span></span><div class='docblock'><p>Sets the size of the arrowhead. This is specified in the units of graph (i.e. <code>1.0</code> would make the arrow as big as the graph).</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'l&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../gnuplot/enum.PlotOption.html' title='gnuplot::PlotOption'>PlotOption</a>&lt;'l&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1260' class='srclink' href='../src/gnuplot/options.rs.html#21' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl&lt;'l&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../gnuplot/enum.PlotOption.html' title='gnuplot::PlotOption'>PlotOption</a>&lt;'l&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1262' class='srclink' href='../src/gnuplot/options.rs.html#21' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../gnuplot/enum.PlotOption.html' title='gnuplot::PlotOption'>PlotOption</a>&lt;'l&gt;</code></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "gnuplot";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
