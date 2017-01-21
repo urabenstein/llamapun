@@ -4,6 +4,7 @@
 
 #![feature(slice_patterns)]
 #![feature(type_ascription)]
+#![feature(box_patterns)]
 #![deny(missing_docs,
         trivial_casts,
         trivial_numeric_casts,
@@ -27,3 +28,4 @@ pub mod data;
 pub mod stopwords;
 pub mod tokenizer;
 pub mod ngrams;
+pub mod patterns;
