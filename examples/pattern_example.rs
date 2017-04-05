@@ -77,17 +77,11 @@ fn math_node_to_string_children(node : &Node, mut string : &mut String) {
 /// prints a marker in a human readable way
 fn print_marker(marker : &MarkerEnum, alt_dnm : &DNM, xpath_context : &Context) {
     match marker {
-        &MarkerEnum::Text(ref text_marker) => {
-            println!("<h5>TextMarker</h5> \"{}\" \n <br /><br /><p>{}</p>", &get_pattern_marker_string(&text_marker.marker),
-                     DNMRange::deserialize(
-                         &text_marker.range.serialize(),
-                         &alt_dnm,
-                         xpath_context)
-                     .get_plaintext());
-        }
+        &MarkerEnum::Text(_) => {}
         &MarkerEnum::Math(ref math_marker) => {
-            println!("<h5>MathMarker</h5> \"{}\"\n <br /><br /> <p>{}</p>", &get_pattern_marker_string(&math_marker.marker),
-                     &math_node_to_string(&math_marker.node));
+            if math_marker.marker.name == "identifier" {
+                println!("{}", DNMRange::serialize_node(&alt_dnm.root_node, &math_marker.node, false));
+            }
         }
     }
 }
@@ -125,6 +119,7 @@ fn get_alternative_dnm(root: &Node) -> DNM {
 
 pub fn main() {
     let pattern_file_result = PatternFile::load("examples/declaration_pattern.xml");
+    // let pattern_file_result = PatternFile::load("examples/ulrich/units_pattern.xml");
     let pattern_file = match pattern_file_result {
         Err(x) => panic!(x),
         Ok(x) => x,
@@ -135,13 +130,12 @@ pub fn main() {
     corpus.dnm_parameters.support_back_mapping = true;
 
     let mut document = corpus.load_doc("tests/resources/1311.0066.xhtml".to_string()).unwrap();
+    // let mut document = corpus.load_doc("examples/ulrich/physics9807021.html".to_string()).unwrap();
     // let mut document = corpus.load_doc("tests/resources/0903.1000.html".to_string()).unwrap();
 
 
     // get a more readable DNM for printing
     let alt_dnm = get_alternative_dnm(&document.dom.get_root_element());
-    println!("<?xml version=\"1.0\" encoding=\"utf-8\"?><html><head><meta http-equiv=\"Content-Type\" content=\"application/xhtml+xml; charset=UTF-8\"/></head>
-             <body>");
 
     for mut sentence in document.sentence_iter() {
         let sentence_2 = sentence.senna_parse();
@@ -149,20 +143,13 @@ pub fn main() {
                                      &sentence_2.range, "declaration").unwrap();
         if matches.len() > 0 {
             let xpath_context = Context::new(&sentence_2.document.dom).unwrap();
-            println!("<hr />");
-            println!("<h4>Sentence</h4>\n<p>{}</p>",
-                     DNMRange::deserialize(
-                         &sentence_2.range.serialize(),
-                         &alt_dnm,
-                         &xpath_context)
-                     .get_plaintext());
             for m in &matches {
                 for m2 in &m.get_marker_list() {
                     print_marker(m2, &alt_dnm, &xpath_context);
                 }
             }
+            
         }
     }
     
-    println!("</body></html>");
 }
