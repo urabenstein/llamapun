@@ -76,16 +76,18 @@ fn math_node_to_string_children(node : &Node, mut string : &mut String) {
 
 
 /// prints a marker in a human readable way
-fn print_marker(marker : &MarkerEnum, alt_dnm : &DNM, xpath_context : &Context) {
+fn print_marker(marker : &MarkerEnum, alt_dnm : &DNM, xpath_context : &Context) -> Option<String> {
     match marker {
         &MarkerEnum::Text(_) => {}
         &MarkerEnum::Math(ref math_marker) => {
             if math_marker.marker.name == "identifier" {
                 let output = format!("{}", DNMRange::serialize_node(&alt_dnm.root_node, &math_marker.node, false));
-                println!("{}", output);
+                return Some(output);
             }
         }
     }
+
+    return None;
 }
 
 /// gets a DNM that is more readable for printing
@@ -119,16 +121,8 @@ fn get_alternative_dnm(root: &Node) -> DNM {
     DNM::new(root.clone(), parameters)
 }
 
-pub fn main() {
+pub fn get_declarations(file_name : String) -> Vec<String> {
     
-    let args : Vec<_> = env::args().collect();
-
-    if args.len() <= 1{
-      println!("usage: ./target/debug/pattern_example_adaption file_name");
-    }
-
-    let file_name = args[1].to_owned();
-
     let pattern_file_result = PatternFile::load("examples/declaration_pattern.xml");
     // let pattern_file_result = PatternFile::load("examples/ulrich/units_pattern.xml");
     let pattern_file = match pattern_file_result {
@@ -148,6 +142,8 @@ pub fn main() {
     // get a more readable DNM for printing
     let alt_dnm = get_alternative_dnm(&document.dom.get_root_element());
 
+    let xpath_vec = Vec::new();
+
     for mut sentence in document.sentence_iter() {
         let sentence_2 = sentence.senna_parse();
         let matches = match_sentence(&pattern_file, &sentence_2.senna_sentence.as_ref().unwrap(),
@@ -156,11 +152,16 @@ pub fn main() {
             let xpath_context = Context::new(&sentence_2.document.dom).unwrap();
             for m in &matches {
                 for m2 in &m.get_marker_list() {
-                    print_marker(m2, &alt_dnm, &xpath_context);
+                    let opt_xpath = print_marker(m2, &alt_dnm, &xpath_context);
+                    if opt_xpath.is_some(){
+                      xpath_vec.push(opt_xpath.unwrap());
+                    }
                 }
             }
             
         }
     }
+
+    return xpath_vec;
     
 }
