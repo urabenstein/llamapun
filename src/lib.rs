@@ -29,3 +29,4 @@ pub mod stopwords;
 pub mod tokenizer;
 pub mod ngrams;
 pub mod patterns;
+pub mod pattern_example_adaption;
