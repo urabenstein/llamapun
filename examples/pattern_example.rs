@@ -1,4 +1,3 @@
-extern crate llamapun;
 extern crate senna;
 extern crate libxml;
 

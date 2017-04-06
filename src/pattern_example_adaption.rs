@@ -1,16 +1,16 @@
-extern crate llamapun;
+//! offers the function to get all declarations in a document
 extern crate senna;
 extern crate libxml;
 
-use llamapun::patterns::*;
-use llamapun::data::Corpus;
+use patterns::*;
+use data::Corpus;
 use senna::senna::SennaParseOptions;
-use llamapun::dnm::*;
+use dnm::*;
 use libxml::xpath::Context;
 use libxml::tree::*;
 use std::rc::Rc;
 use std::collections::HashMap;
-use std::env;
+use std::cell::Cell;
 
 
 /// turns a marker into a readable string representation
@@ -121,6 +121,7 @@ fn get_alternative_dnm(root: &Node) -> DNM {
     DNM::new(root.clone(), parameters)
 }
 
+///returns a vec with the xpaths to the found declarations
 pub fn get_declarations(file_name : String) -> Vec<String> {
     
     let pattern_file_result = PatternFile::load("examples/declaration_pattern.xml");
@@ -131,7 +132,7 @@ pub fn get_declarations(file_name : String) -> Vec<String> {
     };
 
     let mut corpus = Corpus::new(file_name.clone());
-    corpus.senna_options = std::cell::Cell::new( SennaParseOptions { pos : true, psg : true } );
+    corpus.senna_options = Cell::new( SennaParseOptions { pos : true, psg : true } );
     corpus.dnm_parameters.support_back_mapping = true;
 
     let mut document = corpus.load_doc(file_name).unwrap();
@@ -142,7 +143,7 @@ pub fn get_declarations(file_name : String) -> Vec<String> {
     // get a more readable DNM for printing
     let alt_dnm = get_alternative_dnm(&document.dom.get_root_element());
 
-    let xpath_vec = Vec::new();
+    let mut xpath_vec = Vec::new();
 
     for mut sentence in document.sentence_iter() {
         let sentence_2 = sentence.senna_parse();
