@@ -12,13 +12,15 @@ git = "https://github.com/jfschaefer/rust-morpha.git"
 [dependencies.rust-senna]
 git = "https://github.com/jfschaefer/rust-senna.git"
 version = "*"
+[dependencies.rust-libxml]
+git = "https://github.com/jfschaefer/rust-libxml.git"
+branch = "merge_branch"
 
 [dependencies]
 libc = "0.1"
 regex = "0.1"
 time = "0.1"
 walkdir = "0.1"
-libxml = "0.0.746"
 gnuplot = "0.0.21"
 unidecode = "0.2"
 rust-crypto = "0.2"
