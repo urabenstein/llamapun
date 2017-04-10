@@ -11,6 +11,8 @@ use libxml::tree::*;
 use std::rc::Rc;
 use std::collections::HashMap;
 use std::cell::Cell;
+use std::path::PathBuf;
+use std::fs;
 
 
 /// turns a marker into a readable string representation
@@ -123,6 +125,9 @@ fn get_alternative_dnm(root: &Node) -> DNM {
 
 ///returns a vec with the xpaths to the found declarations
 pub fn get_declarations(file_name : String) -> Vec<String> {
+
+    let dir = PathBuf::from("./examples/declaration_pattern.xml");
+    println!("{:?}", fs::canonicalize(&dir));
     
     let pattern_file_result = PatternFile::load("declaration_pattern.xml");
     // let pattern_file_result = PatternFile::load("examples/ulrich/units_pattern.xml");
