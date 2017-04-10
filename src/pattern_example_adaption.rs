@@ -126,9 +126,6 @@ fn get_alternative_dnm(root: &Node) -> DNM {
 ///returns a vec with the xpaths to the found declarations
 pub fn get_declarations(file_name : String) -> Vec<String> {
 
-    let dir = PathBuf::from(".");
-    println!("{:?}", fs::canonicalize(&dir));
-    
     let pattern_file_result = PatternFile::load("declaration_pattern.xml");
     // let pattern_file_result = PatternFile::load("examples/ulrich/units_pattern.xml");
     let pattern_file = match pattern_file_result {
