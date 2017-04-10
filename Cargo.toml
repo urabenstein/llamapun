@@ -12,7 +12,7 @@ git = "https://github.com/jfschaefer/rust-morpha.git"
 [dependencies.rust-senna]
 git = "https://github.com/jfschaefer/rust-senna.git"
 version = "*"
-[dependencies.rust-libxml]
+[dependencies.libxml]
 git = "https://github.com/jfschaefer/rust-libxml.git"
 branch = "merge_branch"
 
